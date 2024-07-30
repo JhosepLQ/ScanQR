@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escáner de Código QR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escáner de Código QR</h1>
+        <video id="video" width="300" height="300"></video>
+        <button id="startButton">Iniciar Escáner</button>
+        <button id="stopButton" style="display:none;">Detener Escáner</button>
+        <button id="downloadButton" style="display:none;" onclick="downloadCSV()">Descargar Registro</button>
+        <div>
+            <h2>Registro de Llegadas</h2>
+            <table id="recordTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>Nivel</th>
+                        <th>Grado</th>
+                        <th>Hora de Llegada</th>
+                    </tr>
+                </thead>
+                <tbody id="recordBody">
+                    <!-- Registros dinámicos -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
